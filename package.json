@@ -12,7 +12,7 @@
     "node",
     "node.js"
   ],
-  "version": "1.7.0-5",
+  "version": "1.7.0-6",
   "author": {
     "name": "Giraldo Rosales",
     "email": "giraldo@nitrogenlabs.com"
@@ -33,6 +33,10 @@
     {
       "name": "Navin Parray",
       "email": "navinparray@gmail.com"
+    },
+    {
+      "name": "Charles Pick",
+      "email": "charles.pick@gmail.com"
     }
   ],
   "repository": {
