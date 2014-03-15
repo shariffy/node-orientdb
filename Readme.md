@@ -19,6 +19,8 @@ npm install
 Status
 ========
 
+[![Build Status](https://travis-ci.org/shariffy/node-orientdb.png?branch=master)](https://travis-ci.org/shariffy/node-orientdb)
+
 The NodeJS OrientDB driver is almost mature, but we are still testing. While we use it in production already and therefore it implements a sufficient number of features for making a fully featured application, we recommend you make some thorough tests before you do it as well. If you find any problems, let us know such that we can improve things. Until version 1.0 we also don't guarantee any backwards compatibility and API stability since we are trying things out. But 1.0 should not be far from now.
 
 Supported Versions
@@ -84,7 +86,7 @@ db.open()
 		//SQL Statement
 		var sql  = 'SELECT FROM Users';
 		var opts = {};
-		
+
         //Queries
         db.query(sql, opts)
             .then(function(results) {
