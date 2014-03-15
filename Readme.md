@@ -86,7 +86,7 @@ db.open()
 		var opts = {};
 		
         //Queries
-        db.query(sql, options)
+        db.query(sql, opts)
             .then(function(results) {
         		console.log(results);
         	})
