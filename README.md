@@ -67,3 +67,43 @@ To start using OrientDB, check out the following YouTube tutorials based on vers
 # Example
 
 ```javascript
+var OrientDB = require('node-orientdb');
+
+var server = OrientDB({
+  host:'localhost',
+  port:2424,
+  username:'admin',
+  password:'admin',
+});
+
+
+var db = server.use({
+  name: 'test',
+  username: 'admin',
+  password: 'admin',
+  type: 'graph', // optional, defaults document
+  storage: 'plocal', // optional, defaults to plocal
+});
+
+db.cluster.list()
+.then(function (clusters) {
+  console.log('Database ' + db.name + ' has ' + clusters.length + ' clusters');
+  return db.query('SELECT FROM OUser');
+})
+.then(function (response) {
+  console.log('Users:', response);
+  return db.record.get('#5:0');
+})
+.then(function (record) {
+  console.log('Loaded Record:', record);
+})
+.done();
+```
+
+# Changes
+
+See [CHANGELOG](./CHANGELOG.md)
+
+# Driver Compatibility
+
+To see if your version of OrientDB supports a method, please see the compatibility list: [Operation Types](https://github.com/orientechnologies/orientdb/wiki/Network-Binary-Protocol#operation-types)
